@@ -35,3 +35,8 @@ https://www.thonk.co.uk/shop/axoc/
 
 * channel 16 is used for the auto channel
 
+
+#### Midi keyboard
+
+* a midi keyboard can used as well to control Digitakt : just plug it in the Axoloti midi din
+
