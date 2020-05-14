@@ -19,6 +19,11 @@ https://www.thonk.co.uk/shop/axoc/
 
 * joystick is used to control delay length and feedback
 
+###### automation
+
+* button 1 : record joystick
+* button 2 : record reverb decay
+
 
 #### Launchcontrol XL
 
