@@ -6,6 +6,14 @@
 
 * axoloti + axocontrol patch, to allow controlling of the 8 sample tracks of the digitakt
 
+#### Digitakt configuration
+
+* midi tracks 1-8 : channels 1-8 
+* midi tracks 9-15 : channels 9-15
+* fx control : channels 9
+* auto channel : channels 16 
+
+
 #### Axocontrol
 
 https://www.thonk.co.uk/shop/axoc/
@@ -37,8 +45,6 @@ https://www.thonk.co.uk/shop/axoc/
 * Track focus buttons (row 1) allow muting of tracks 1 - 8
 
 * Track control buttons (row 2) allow muting of tracks 9 - 15
-
-* channel 16 is used for the auto channel
 
 
 #### Midi keyboard
