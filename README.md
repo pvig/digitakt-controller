@@ -1,10 +1,14 @@
-## Digitakt controller :control_knobs:
+# Digitakt controller :control_knobs:
 
-### Launch control XL hosted by axoloti to control Digitakt
+### Novation Launch control XL hosted by axoloti to control Digitakt
 
-contains an axoloti + axocontrol patch, to allow controlling of the 8 sample tracks of the digitakt
+* what is an axoloti ? http://www.axoloti.com/
+
+* axoloti + axocontrol patch, to allow controlling of the 8 sample tracks of the digitakt
 
 #### Axocontrol
+
+https://www.thonk.co.uk/shop/axoc/
 
 * pot 1 : delay length
 * pot 2 : delay feedback
