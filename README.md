@@ -16,7 +16,9 @@
 
 #### Axocontrol
 
-https://www.thonk.co.uk/shop/axoc/
+https://github.com/TomWhitwell/Axo-control
+
+- you may buy it here : https://www.thonk.co.uk/shop/axoc/
 
 * pot 1 : delay length
 * pot 2 : delay feedback
