@@ -1,9 +1,15 @@
 <patch-1.0 appVersion="1.0.12">
-   <obj type="a773/axocontrol" uuid="751b3605-f062-4660-8406-3eb1c2b3d526" name="axocontrol_1" x="28" y="70">
+   <obj type="a773/axocontrol" uuid="751b3605-f062-4660-8406-3eb1c2b3d526" name="axocontrol_1" x="56" y="70">
       <params/>
       <attribs/>
    </obj>
-   <patcher type="patch/patcher" uuid="2efde15f-927a-4e20-9ea1-d3e7f58e720e" name="delay automat" x="168" y="70">
+   <obj type="math/&gt;&gt;" uuid="d883beaf50b7aae4803ed9941e8f123e87e1e3aa" name="&gt;&gt;_1" x="196" y="70">
+      <params/>
+      <attribs>
+         <spinner attributeName="shift" value="1"/>
+      </attribs>
+   </obj>
+   <patcher type="patch/patcher" uuid="d54e89b1-a178-49ac-943c-b86c2c4416e6" name="delay automat" x="294" y="70">
       <params/>
       <attribs/>
       <subpatch appVersion="1.0.12">
@@ -28,14 +34,14 @@
          <obj type="tb/seq/automate 32b sdram" uuid="505711411b6868912e5595aa534c223b69569405" name="automate_1" x="420" y="126">
             <params/>
             <attribs>
-               <combo attributeName="size" selection="1024"/>
+               <combo attributeName="size" selection="2048"/>
             </attribs>
          </obj>
-         <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_4" x="616" y="126">
+         <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_4" x="700" y="126">
             <params/>
             <attribs/>
          </obj>
-         <obj type="logic/change" uuid="96e39ae624c3f3c952cec4a95e1986ee0104f718" name="change_7" x="686" y="126">
+         <obj type="logic/change" uuid="96e39ae624c3f3c952cec4a95e1986ee0104f718" name="change_7" x="770" y="126">
             <params/>
             <attribs/>
          </obj>
@@ -73,11 +79,17 @@
             </params>
             <attribs/>
          </obj>
-         <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_1" x="616" y="182">
+         <obj type="math/&gt;&gt;" uuid="d883beaf50b7aae4803ed9941e8f123e87e1e3aa" name="&gt;&gt;_1" x="602" y="182">
+            <params/>
+            <attribs>
+               <spinner attributeName="shift" value="2"/>
+            </attribs>
+         </obj>
+         <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_1" x="700" y="182">
             <params/>
             <attribs/>
          </obj>
-         <obj type="logic/change" uuid="96e39ae624c3f3c952cec4a95e1986ee0104f718" name="change_4" x="686" y="182">
+         <obj type="logic/change" uuid="96e39ae624c3f3c952cec4a95e1986ee0104f718" name="change_4" x="770" y="182">
             <params/>
             <attribs/>
          </obj>
@@ -94,14 +106,14 @@
          <obj type="tb/seq/automate 32b sdram" uuid="505711411b6868912e5595aa534c223b69569405" name="automate_2" x="420" y="266">
             <params/>
             <attribs>
-               <combo attributeName="size" selection="1024"/>
+               <combo attributeName="size" selection="2048"/>
             </attribs>
          </obj>
-         <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_3" x="616" y="266">
+         <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_3" x="700" y="266">
             <params/>
             <attribs/>
          </obj>
-         <obj type="logic/change" uuid="96e39ae624c3f3c952cec4a95e1986ee0104f718" name="change_6" x="686" y="266">
+         <obj type="logic/change" uuid="96e39ae624c3f3c952cec4a95e1986ee0104f718" name="change_6" x="770" y="266">
             <params/>
             <attribs/>
          </obj>
@@ -133,11 +145,17 @@
             <params/>
             <attribs/>
          </obj>
-         <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_2" x="616" y="322">
+         <obj type="math/&gt;&gt;" uuid="d883beaf50b7aae4803ed9941e8f123e87e1e3aa" name="&gt;&gt;_2" x="602" y="322">
+            <params/>
+            <attribs>
+               <spinner attributeName="shift" value="2"/>
+            </attribs>
+         </obj>
+         <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_2" x="700" y="322">
             <params/>
             <attribs/>
          </obj>
-         <obj type="logic/change" uuid="96e39ae624c3f3c952cec4a95e1986ee0104f718" name="change_5" x="686" y="322">
+         <obj type="logic/change" uuid="96e39ae624c3f3c952cec4a95e1986ee0104f718" name="change_5" x="770" y="322">
             <params/>
             <attribs/>
          </obj>
@@ -196,14 +214,14 @@
             <net>
                <source obj="inlet_2" outlet="inlet"/>
                <dest obj="xfade_2" inlet="i2"/>
-               <dest obj="to_2" inlet="i"/>
                <dest obj="speedlim_3" inlet="in"/>
+               <dest obj="&gt;&gt;_2" inlet="a"/>
             </net>
             <net>
                <source obj="inlet_1" outlet="inlet"/>
                <dest obj="xfade_1" inlet="i2"/>
-               <dest obj="to_1" inlet="i"/>
                <dest obj="speedlim_2" inlet="in"/>
+               <dest obj="&gt;&gt;_1" inlet="a"/>
             </net>
             <net>
                <source obj="inlet_3" outlet="inlet"/>
@@ -314,6 +332,14 @@
                <source obj="d_2" outlet="env"/>
                <dest obj="hd_2" inlet="trig"/>
             </net>
+            <net>
+               <source obj="&gt;&gt;_1" outlet="result"/>
+               <dest obj="to_1" inlet="i"/>
+            </net>
+            <net>
+               <source obj="&gt;&gt;_2" outlet="result"/>
+               <dest obj="to_2" inlet="i"/>
+            </net>
          </nets>
          <settings>
             <subpatchmode>no</subpatchmode>
@@ -321,45 +347,39 @@
          <notes><![CDATA[]]></notes>
          <windowPos>
             <x>28</x>
-            <y>94</y>
+            <y>85</y>
             <width>1584</width>
             <height>928</height>
          </windowPos>
       </subpatch>
    </patcher>
-   <obj type="math/&gt;&gt;" uuid="d883beaf50b7aae4803ed9941e8f123e87e1e3aa" name="&gt;&gt;_1" x="322" y="70">
-      <params/>
-      <attribs>
-         <spinner attributeName="shift" value="2"/>
-      </attribs>
-   </obj>
-   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_8" x="420" y="70">
+   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_8" x="476" y="70">
       <params/>
       <attribs/>
    </obj>
-   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_1" x="490" y="70">
+   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_1" x="546" y="70">
       <params>
-         <frac32.s.map name="d" value="-48.0"/>
+         <frac32.s.map name="d" value="-15.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="math/+" uuid="44553fdc8628c67ab535845ed1be304ad6c9553b" name="+_1" x="924" y="70">
+   <obj type="math/+" uuid="44553fdc8628c67ab535845ed1be304ad6c9553b" name="+_1" x="980" y="70">
       <params/>
       <attribs/>
    </obj>
-   <obj type="math/quantize" uuid="5cf03957d7a41d6aa91bb9bfaec2840f8f4bed7c" name="quantize_1" x="1008" y="70">
+   <obj type="math/quantize" uuid="5cf03957d7a41d6aa91bb9bfaec2840f8f4bed7c" name="quantize_1" x="1064" y="70">
       <params/>
       <attribs>
          <spinner attributeName="bits" value="7"/>
       </attribs>
    </obj>
-   <obj type="math/-c" uuid="bc70bed87e5405985ade03f4806b9450609a9093" name="-c_1" x="1106" y="70">
+   <obj type="math/-c" uuid="bc70bed87e5405985ade03f4806b9450609a9093" name="-c_1" x="1162" y="70">
       <params>
          <frac32.u.map name="c" value="0.4499998092651367"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="midi/out/cc thin" uuid="5255b30d60e50223ed41179d8ce935ba9464de75" name="delay_time" x="1176" y="70">
+   <obj type="midi/out/cc thin" uuid="5255b30d60e50223ed41179d8ce935ba9464de75" name="delay_time" x="1232" y="70">
       <params/>
       <attribs>
          <combo attributeName="device" selection="din"/>
@@ -367,53 +387,53 @@
          <spinner attributeName="cc" value="85"/>
       </attribs>
    </obj>
-   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_4" x="630" y="84">
+   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_4" x="686" y="84">
       <params/>
       <attribs/>
    </obj>
-   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_5" x="700" y="84">
+   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_5" x="756" y="84">
       <params>
-         <frac32.s.map name="d" value="-31.0"/>
+         <frac32.s.map name="d" value="5.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="math/&gt;&gt;" uuid="d883beaf50b7aae4803ed9941e8f123e87e1e3aa" name="&gt;&gt;_2" x="322" y="154">
+   <obj type="math/&gt;&gt;" uuid="d883beaf50b7aae4803ed9941e8f123e87e1e3aa" name="&gt;&gt;_2" x="196" y="140">
       <params/>
       <attribs>
          <spinner attributeName="shift" value="2"/>
       </attribs>
    </obj>
-   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_9" x="420" y="154">
+   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_9" x="476" y="154">
       <params/>
       <attribs/>
    </obj>
-   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_2" x="490" y="154">
+   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_2" x="546" y="154">
       <params>
-         <frac32.s.map name="d" value="-46.0"/>
+         <frac32.s.map name="d" value="-15.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_5" x="630" y="168">
+   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_5" x="686" y="168">
       <params/>
       <attribs/>
    </obj>
-   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_6" x="700" y="168">
+   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_6" x="756" y="168">
       <params>
-         <frac32.s.map name="d" value="-32.0"/>
+         <frac32.s.map name="d" value="5.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="math/+" uuid="44553fdc8628c67ab535845ed1be304ad6c9553b" name="+_2" x="980" y="196">
+   <obj type="math/+" uuid="44553fdc8628c67ab535845ed1be304ad6c9553b" name="+_2" x="1036" y="196">
       <params/>
       <attribs/>
    </obj>
-   <obj type="math/*c" uuid="7d5ef61c3bcd571ee6bbd8437ef3612125dfb225" name="*c_1" x="1064" y="196">
+   <obj type="math/*c" uuid="7d5ef61c3bcd571ee6bbd8437ef3612125dfb225" name="*c_1" x="1120" y="196">
       <params>
          <frac32.u.map name="amp" value="43.5"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="midi/out/cc thin" uuid="5255b30d60e50223ed41179d8ce935ba9464de75" name="delay_fdbck" x="1176" y="196">
+   <obj type="midi/out/cc thin" uuid="5255b30d60e50223ed41179d8ce935ba9464de75" name="delay_fdbck" x="1232" y="196">
       <params/>
       <attribs>
          <combo attributeName="device" selection="din"/>
@@ -421,60 +441,38 @@
          <spinner attributeName="cc" value="88"/>
       </attribs>
    </obj>
-   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_3" x="182" y="238">
+   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_3" x="238" y="238">
       <params/>
       <attribs/>
    </obj>
-   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_3" x="238" y="238">
+   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_3" x="294" y="238">
       <params>
-         <frac32.s.map name="d" value="-33.0"/>
+         <frac32.s.map name="d" value="6.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_6" x="630" y="252">
+   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_6" x="686" y="252">
       <params/>
       <attribs/>
    </obj>
-   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_7" x="700" y="252">
+   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_7" x="756" y="252">
       <params>
-         <frac32.s.map name="d" value="-28.0"/>
+         <frac32.s.map name="d" value="5.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="midi/out/cc thin" uuid="5255b30d60e50223ed41179d8ce935ba9464de75" name="delay_volume" x="1176" y="308">
-      <params/>
-      <attribs>
-         <combo attributeName="device" selection="din"/>
-         <spinner attributeName="channel" value="9"/>
-         <spinner attributeName="cc" value="92"/>
-      </attribs>
-   </obj>
-   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_2" x="182" y="336">
-      <params/>
-      <attribs/>
-   </obj>
-   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_4" x="238" y="336">
-      <params>
-         <frac32.s.map name="d" value="-31.0"/>
-      </params>
-      <attribs/>
-   </obj>
-   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_7" x="630" y="336">
-      <params/>
-      <attribs/>
-   </obj>
-   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_8" x="700" y="336">
-      <params>
-         <frac32.s.map name="d" value="-23.0"/>
-      </params>
-      <attribs/>
-   </obj>
-   <patcher type="patch/patcher" uuid="0a8ae3c1-836b-4e9d-8fb3-ab9567218046" name="reverb automat" x="952" y="364">
+   <patcher type="patch/patcher" uuid="40a1b0e8-7274-4a8d-83ca-13d6f9c34d10" name="reverb automat" x="938" y="308">
       <params/>
       <attribs/>
       <subpatch appVersion="1.0.12">
          <obj type="logic/inv" uuid="2bd44b865d3b63ff9b80862242bf5be779e3ad5" name="inv_1" x="182" y="28">
             <params/>
+            <attribs/>
+         </obj>
+         <obj type="lfo/square" uuid="de6909eb64db13af5b43f979a4c130024b3a4793" name="square_1" x="644" y="28">
+            <params>
+               <frac32.s.map name="pitch" value="37.0"/>
+            </params>
             <attribs/>
          </obj>
          <obj type="demux/demux 2" uuid="28788637ca4264670042a31303a9d6e100646ff0" name="demux_1" x="770" y="28">
@@ -485,11 +483,13 @@
             <params/>
             <attribs/>
          </obj>
-         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="clock" x="56" y="84">
-            <params/>
+         <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_2" x="182" y="126">
+            <params>
+               <frac32.s.map name="d" value="-17.0"/>
+            </params>
             <attribs/>
          </obj>
-         <obj type="tb/seq/automate 32b sdram" uuid="505711411b6868912e5595aa534c223b69569405" name="automate_1" x="420" y="126">
+         <obj type="tb/seq/automate 32b sdram" uuid="505711411b6868912e5595aa534c223b69569405" name="automate_1" x="322" y="126">
             <params/>
             <attribs>
                <combo attributeName="size" selection="1024"/>
@@ -527,13 +527,25 @@
          </obj>
          <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_4" x="1134" y="154">
             <params>
-               <frac32.s.map name="d" value="-11.0"/>
+               <frac32.s.map name="d" value="0.0"/>
             </params>
             <attribs/>
          </obj>
          <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_1" x="1274" y="154">
             <params/>
             <attribs/>
+         </obj>
+         <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_3" x="182" y="210">
+            <params>
+               <frac32.s.map name="d" value="-17.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="math/&gt;&gt;" uuid="d883beaf50b7aae4803ed9941e8f123e87e1e3aa" name="&gt;&gt;_1" x="504" y="210">
+            <params/>
+            <attribs>
+               <spinner attributeName="shift" value="2"/>
+            </attribs>
          </obj>
          <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_1" x="602" y="210">
             <params/>
@@ -547,7 +559,7 @@
             <params/>
             <attribs/>
          </obj>
-         <obj type="tb/seq/automate 32b sdram" uuid="505711411b6868912e5595aa534c223b69569405" name="automate_2" x="420" y="280">
+         <obj type="tb/seq/automate 32b sdram" uuid="505711411b6868912e5595aa534c223b69569405" name="automate_2" x="322" y="280">
             <params/>
             <attribs>
                <combo attributeName="size" selection="1024"/>
@@ -581,7 +593,7 @@
          </obj>
          <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_5" x="1134" y="280">
             <params>
-               <frac32.s.map name="d" value="-11.0"/>
+               <frac32.s.map name="d" value="0.0"/>
             </params>
             <attribs/>
          </obj>
@@ -592,6 +604,12 @@
          <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="inlet_3" x="56" y="308">
             <params/>
             <attribs/>
+         </obj>
+         <obj type="math/&gt;&gt;" uuid="d883beaf50b7aae4803ed9941e8f123e87e1e3aa" name="&gt;&gt;_2" x="504" y="336">
+            <params/>
+            <attribs>
+               <spinner attributeName="shift" value="2"/>
+            </attribs>
          </obj>
          <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_2" x="602" y="336">
             <params/>
@@ -653,16 +671,16 @@
                <dest obj="automate_2" inlet="reset"/>
             </net>
             <net>
-               <source obj="inlet_2" outlet="inlet"/>
+               <source obj="speedlim_3" outlet="out"/>
                <dest obj="xfade_2" inlet="i2"/>
-               <dest obj="to_2" inlet="i"/>
                <dest obj="automate_2" inlet="v"/>
+               <dest obj="&gt;&gt;_2" inlet="a"/>
             </net>
             <net>
-               <source obj="inlet_1" outlet="inlet"/>
+               <source obj="speedlim_2" outlet="out"/>
                <dest obj="xfade_1" inlet="i2"/>
-               <dest obj="to_1" inlet="i"/>
                <dest obj="automate_1" inlet="v"/>
+               <dest obj="&gt;&gt;_1" inlet="a"/>
             </net>
             <net>
                <source obj="inlet_3" outlet="inlet"/>
@@ -731,10 +749,6 @@
                <dest obj="demux_1" inlet="s"/>
             </net>
             <net>
-               <source obj="clock" outlet="inlet"/>
-               <dest obj="demux_1" inlet="i"/>
-            </net>
-            <net>
                <source obj="to_3" outlet="o"/>
                <dest obj="change_6" inlet="in"/>
                <dest obj="xfade_1" inlet="i1"/>
@@ -776,6 +790,26 @@
                <source obj="or_6" outlet="o"/>
                <dest obj="latch_1" inlet="trig"/>
             </net>
+            <net>
+               <source obj="&gt;&gt;_2" outlet="result"/>
+               <dest obj="to_2" inlet="i"/>
+            </net>
+            <net>
+               <source obj="&gt;&gt;_1" outlet="result"/>
+               <dest obj="to_1" inlet="i"/>
+            </net>
+            <net>
+               <source obj="square_1" outlet="wave"/>
+               <dest obj="demux_1" inlet="i"/>
+            </net>
+            <net>
+               <source obj="inlet_1" outlet="inlet"/>
+               <dest obj="speedlim_2" inlet="in"/>
+            </net>
+            <net>
+               <source obj="inlet_2" outlet="inlet"/>
+               <dest obj="speedlim_3" inlet="in"/>
+            </net>
          </nets>
          <settings>
             <subpatchmode>no</subpatchmode>
@@ -784,12 +818,48 @@
          <windowPos>
             <x>262</x>
             <y>23</y>
-            <width>1402</width>
+            <width>1658</width>
             <height>928</height>
          </windowPos>
       </subpatch>
    </patcher>
-   <obj type="midi/out/cc thin" uuid="5255b30d60e50223ed41179d8ce935ba9464de75" name="delay_reverb_send" x="1176" y="434">
+   <obj type="disp/chart b" uuid="d2bdf496f96ee521628490a038411210fbe29b15" name="chart_1" x="1120" y="308">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="midi/out/cc thin" uuid="5255b30d60e50223ed41179d8ce935ba9464de75" name="delay_volume" x="1232" y="308">
+      <params/>
+      <attribs>
+         <combo attributeName="device" selection="din"/>
+         <spinner attributeName="channel" value="9"/>
+         <spinner attributeName="cc" value="92"/>
+      </attribs>
+   </obj>
+   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_2" x="238" y="336">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_4" x="294" y="336">
+      <params>
+         <frac32.s.map name="d" value="6.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="conv/to i" uuid="305966430ee86b5c3b8e18cde0c721657c558a87" name="to_7" x="686" y="336">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_8" x="756" y="336">
+      <params>
+         <frac32.s.map name="d" value="5.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/chart b" uuid="d2bdf496f96ee521628490a038411210fbe29b15" name="chart_2" x="1120" y="420">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="midi/out/cc thin" uuid="5255b30d60e50223ed41179d8ce935ba9464de75" name="delay_reverb_send" x="1232" y="434">
       <params/>
       <attribs>
          <combo attributeName="device" selection="din"/>
@@ -797,17 +867,17 @@
          <spinner attributeName="cc" value="91"/>
       </attribs>
    </obj>
-   <obj type="midi/in/keyb mod" uuid="abcd509d15e7d13d5381203fd2b4d0ac6fe57bb3" name="keyb_1" x="56" y="476">
+   <obj type="midi/in/keyb mod" uuid="abcd509d15e7d13d5381203fd2b4d0ac6fe57bb3" name="keyb_1" x="112" y="476">
       <params/>
       <attribs/>
    </obj>
-   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_9" x="154" y="476">
+   <obj type="rbrt/control/speedlim" uuid="67c994de-e8ef-47f7-823a-4956d72fb5c2" name="speedlim_9" x="210" y="476">
       <params>
-         <frac32.s.map name="d" value="-19.0"/>
+         <frac32.s.map name="d" value="-2.0"/>
       </params>
       <attribs/>
    </obj>
-   <obj type="drj/seq/tap_tempo" uuid="218abeeb612323af53436541811139814b3a4793" name="tap_tempo_1" x="280" y="476">
+   <obj type="drj/seq/tap_tempo" uuid="218abeeb612323af53436541811139814b3a4793" name="tap_tempo_1" x="336" y="476">
       <params>
          <int32 name="clockmul" value="28"/>
          <int32 name="clockdiv" value="1"/>
@@ -815,7 +885,7 @@
       </params>
       <attribs/>
    </obj>
-   <patcher type="patch/patcher" uuid="aeaf96a7-cd59-4a49-b1c5-834f6dae477a" name="cc automat" x="560" y="490">
+   <patcher type="patch/patcher" uuid="68506249-5dc6-4d99-aeb9-6494e53e3344" name="cc automat" x="616" y="490">
       <params/>
       <attribs>
          <combo attributeName="poly" selection="16"/>
@@ -1095,7 +1165,7 @@
          </windowPos>
       </subpatch>
    </patcher>
-   <obj type="midi/out/cc thin" uuid="5255b30d60e50223ed41179d8ce935ba9464de75" name="reverb_decay" x="1176" y="560">
+   <obj type="midi/out/cc thin" uuid="5255b30d60e50223ed41179d8ce935ba9464de75" name="reverb_decay" x="1232" y="560">
       <params/>
       <attribs>
          <combo attributeName="device" selection="din"/>
@@ -1103,7 +1173,7 @@
          <spinner attributeName="cc" value="25"/>
       </attribs>
    </obj>
-   <obj type="midi/out/cc thin" uuid="5255b30d60e50223ed41179d8ce935ba9464de75" name="compress_mix" x="1176" y="672">
+   <obj type="midi/out/cc thin" uuid="5255b30d60e50223ed41179d8ce935ba9464de75" name="compress_mix" x="1232" y="672">
       <params/>
       <attribs>
          <combo attributeName="device" selection="din"/>
@@ -1111,17 +1181,17 @@
          <spinner attributeName="cc" value="118"/>
       </attribs>
    </obj>
-   <obj type="midi/in/cc i any" uuid="a5a8957c081888a8175ecd4630479533958e488b" name="cc_1" x="56" y="700">
+   <obj type="midi/in/cc i any" uuid="a5a8957c081888a8175ecd4630479533958e488b" name="cc_1" x="112" y="700">
       <params/>
       <attribs/>
    </obj>
-   <obj type="midi/out/cc any" uuid="d49b3be79ccfae03f0630feecafe683b0e9507d4" name="cc_2" x="168" y="700">
+   <obj type="midi/out/cc any" uuid="d49b3be79ccfae03f0630feecafe683b0e9507d4" name="cc_2" x="224" y="700">
       <params/>
       <attribs>
          <combo attributeName="device" selection="din"/>
       </attribs>
    </obj>
-   <obj type="a773/midithru_incl_clock" uuid="82b2821e-bacc-4e10-8bcc-d827d6e1206d" name="midithru_incl_clock_1" x="532" y="728">
+   <obj type="a773/midithru_incl_clock" uuid="82b2821e-bacc-4e10-8bcc-d827d6e1206d" name="midithru_incl_clock_1" x="588" y="728">
       <params/>
       <attribs>
          <combo attributeName="input" selection="din"/>
@@ -1136,11 +1206,11 @@
       </net>
       <net>
          <source obj="axocontrol_1" outlet="joyx"/>
-         <dest obj="delay automat" inlet="inlet_1"/>
+         <dest obj="&gt;&gt;_1" inlet="a"/>
       </net>
       <net>
          <source obj="axocontrol_1" outlet="joyy"/>
-         <dest obj="delay automat" inlet="inlet_2"/>
+         <dest obj="&gt;&gt;_2" inlet="a"/>
       </net>
       <net>
          <source obj="speedlim_1" outlet="out"/>
@@ -1153,6 +1223,7 @@
       <net>
          <source obj="*c_1" outlet="out"/>
          <dest obj="delay_fdbck" inlet="v"/>
+         <dest obj="chart_2" inlet="in"/>
       </net>
       <net>
          <source obj="+_2" outlet="out"/>
@@ -1232,23 +1303,15 @@
       </net>
       <net>
          <source obj="delay automat" outlet="outlet_1"/>
-         <dest obj="&gt;&gt;_1" inlet="a"/>
+         <dest obj="to_8" inlet="i"/>
       </net>
       <net>
          <source obj="speedlim_2" outlet="out"/>
          <dest obj="+_2" inlet="in1"/>
       </net>
       <net>
-         <source obj="&gt;&gt;_1" outlet="result"/>
-         <dest obj="to_8" inlet="i"/>
-      </net>
-      <net>
-         <source obj="&gt;&gt;_2" outlet="result"/>
-         <dest obj="to_9" inlet="i"/>
-      </net>
-      <net>
          <source obj="delay automat" outlet="outlet_2"/>
-         <dest obj="&gt;&gt;_2" inlet="a"/>
+         <dest obj="to_9" inlet="i"/>
       </net>
       <net>
          <source obj="to_8" outlet="o"/>
@@ -1269,6 +1332,7 @@
       <net>
          <source obj="-c_1" outlet="out"/>
          <dest obj="delay_time" inlet="v"/>
+         <dest obj="chart_1" inlet="in"/>
       </net>
       <net>
          <source obj="axocontrol_1" outlet="buttonC"/>
@@ -1328,7 +1392,14 @@
       <net>
          <source obj="tap_tempo_1" outlet="clock"/>
          <dest obj="cc automat" inlet="clock"/>
-         <dest obj="reverb automat" inlet="clock"/>
+      </net>
+      <net>
+         <source obj="&gt;&gt;_1" outlet="result"/>
+         <dest obj="delay automat" inlet="inlet_1"/>
+      </net>
+      <net>
+         <source obj="&gt;&gt;_2" outlet="result"/>
+         <dest obj="delay automat" inlet="inlet_2"/>
       </net>
    </nets>
    <settings>
@@ -1338,13 +1409,12 @@
       <NPresetEntries>0</NPresetEntries>
       <NModulationSources>0</NModulationSources>
       <NModulationTargetsPerSource>0</NModulationTargetsPerSource>
-      <Author></Author>
    </settings>
    <notes><![CDATA[]]></notes>
    <windowPos>
-      <x>567</x>
+      <x>370</x>
       <y>23</y>
       <width>1353</width>
-      <height>998</height>
+      <height>990</height>
    </windowPos>
 </patch-1.0>
