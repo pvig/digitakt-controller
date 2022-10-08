@@ -51,5 +51,5 @@ you may buy it here : https://www.thonk.co.uk/shop/axoc/
 
 #### Midi keyboard
 
-* a midi keyboard can used as well to control Digitakt : just plug it in the Axoloti midi din
+* a midi keyboard can be used as well to control Digitakt : just plug it in the Axoloti midi din
 
