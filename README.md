@@ -8,6 +8,7 @@
 
 #### Digitakt configuration
 
+* receive CC/NRPN : On 
 * midi tracks 1-8 : channels 1-8 
 * midi tracks 9-15 : channels 9-15
 * fx control : channels 9
